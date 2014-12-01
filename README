@@ -1,4 +1,4 @@
-This is your new Play application
+Musical shelter contest Play application
 =================================
 
-This file will be packaged with your application, when using `activator dist`.
+Приложение подгружает страничку с репостами из группы вк и выбирает рандомом победителя (скрипт /public/javascripts/contest.js)
