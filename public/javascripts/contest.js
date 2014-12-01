@@ -28,21 +28,23 @@ $(window).load(function(){
 
 function getWinners() {
 	var num = $('#members').find('.member').length;
-	var firstWinner = Math.floor((Math.random() * num) + 1);
-	var secondWinner = Math.floor((Math.random() * num-1) + 1);
+	var firstWinner = Math.floor((Math.random() * num));
+	var secondWinner = Math.floor((Math.random() * num-1));
 	if (secondWinner == firstWinner) {
-		while(secondWinner != firstWinner) {
-			secondWinner = Math.floor((Math.random() * num-1) + 1);
+		while(secondWinner == firstWinner) {
+			secondWinner = Math.floor((Math.random() * num-1));
 		}
 	}
+	console.log(num);
 
-	var thirdWinner = Math.floor((Math.random() * num-2) + 1);
+	var thirdWinner = Math.floor((Math.random() * num-2));
 
 	if (thirdWinner == firstWinner || thirdWinner == secondWinner) {
-		while(thirdWinner != firstWinner && thirdWinner != secondWinner) {
-			thirdWinner = Math.floor((Math.random() * num-1) + 1);
+		while(thirdWinner == firstWinner || thirdWinner == secondWinner) {
+			thirdWinner = Math.floor((Math.random() * num-2));
 		}
 	}
+	console.log(num);
 
 	console.log(firstWinner);
 	console.log(secondWinner);
